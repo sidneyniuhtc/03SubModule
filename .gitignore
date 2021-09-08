@@ -33,4 +33,5 @@
 /.vs
 
 out/
-/build
+build/
+install/
