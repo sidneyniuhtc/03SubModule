@@ -11,6 +11,4 @@ project(${PROJ_NAME})
 
 install(TARGETS lib02Math DESTINATION lib)
 
-file(GLOB_RECURSE MATH_HEADERS "${PROJECT_SOURCE_DIR}/02Math/include/*.hpp")
-
 install(DIRECTORY "${PROJECT_SOURCE_DIR}/02Math/include" DESTINATION include)
