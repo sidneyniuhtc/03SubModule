@@ -1,3 +1,6 @@
-[submodule "02Math"]
-	path = 02Math
+[submodule "dep/02Math"]
+	path = dep/02Math
 	url = https://github.com/sidneyniuhtc/02Math.git
+[submodule "3rdParty/01FirstProject"]
+	path = 3rdParty/01FirstProject
+	url = https://github.com/sidneyniuhtc/01FirstProject.git
