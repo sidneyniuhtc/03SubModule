@@ -5,7 +5,6 @@ set(UPSTREAM_VERSION 3.4.1)
 
 add_subdirectory(02Math)
 add_subdirectory(02Algorithm)
-add_subdirectory(3rdParty\00HelloCMake)
 
 set(PROJ_NAME "03Submodule")
 set(PROJ_TEST "Test${PROJ_NAME}")
@@ -15,7 +14,9 @@ project(${PROJ_NAME})
 
 set_property(TARGET lib02Math PROPERTY VERSION ${UPSTREAM_VERSION})
 
-install(TARGETS lib02Math
+set(VIVE_TARGETS lib02Math lib02Algorithm)
+
+install(TARGETS ${VIVE_TARGETS}
   EXPORT ViveSDKConfig
   RUNTIME DESTINATION ViveSDK/bin
   LIBRARY DESTINATION ViveSDK/lib
@@ -30,3 +31,5 @@ install(EXPORT ViveSDKConfig
 )
 
 install(DIRECTORY "${PROJECT_SOURCE_DIR}/02Math/include" DESTINATION ViveSDK)
+
+install(DIRECTORY "${PROJECT_SOURCE_DIR}/02Algorithm/include" DESTINATION ViveSDK)
