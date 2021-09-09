@@ -1,8 +1,6 @@
 cmake_minimum_required (VERSION 3.12)
 
 
-set(UPSTREAM_VERSION 3.4.1)
-
 add_subdirectory(02Math)
 add_subdirectory(02Algorithm)
 
@@ -12,24 +10,21 @@ set(PROJ_LIB "lib${PROJ_NAME}")
 
 project(${PROJ_NAME})
 
-set_property(TARGET lib02Math PROPERTY VERSION ${UPSTREAM_VERSION})
-
 set(VIVE_TARGETS lib02Math lib02Algorithm)
 
-install(TARGETS ${VIVE_TARGETS}
-  EXPORT ViveSDKConfig
-  RUNTIME DESTINATION ViveSDK/bin
-  LIBRARY DESTINATION ViveSDK/lib
-  ARCHIVE DESTINATION ViveSDK/lib
-  INCLUDES DESTINATION ViveSDK/include
-  )
-
-install(EXPORT ViveSDKConfig
-    FILE ViveSDKConfig.cmake
-    DESTINATION ViveSDK
-    NAMESPACE Vive::
-)
 
 install(DIRECTORY "${PROJECT_SOURCE_DIR}/02Math/include" DESTINATION ViveSDK)
 
 install(DIRECTORY "${PROJECT_SOURCE_DIR}/02Algorithm/include" DESTINATION ViveSDK)
+
+
+install(TARGETS ${VIVE_TARGETS} EXPORT ViveSDKConfig
+  RUNTIME DESTINATION ViveSDK/bin
+  LIBRARY DESTINATION ViveSDK/lib
+  ARCHIVE DESTINATION ViveSDK/lib
+  INCLUDES DESTINATION ViveSDK/include
+)
+
+install(EXPORT ViveSDKConfig
+    FILE ViveSDKConfig.cmake DESTINATION ViveSDK
+)
