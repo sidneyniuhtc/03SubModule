@@ -15,15 +15,15 @@ project(${PROJ_NAME})
 set_property(TARGET lib02Math PROPERTY VERSION ${UPSTREAM_VERSION})
 
 install(TARGETS lib02Math
-  EXPORT lib02MathConfig
+  EXPORT ViveSDKConfig
   RUNTIME DESTINATION ViveSDK/bin
   LIBRARY DESTINATION ViveSDK/lib
   ARCHIVE DESTINATION ViveSDK/lib
   INCLUDES DESTINATION ViveSDK/include
   )
 
-install(EXPORT lib02MathConfig
-    FILE lib02MathConfig.cmake
+install(EXPORT ViveSDKConfig
+    FILE ViveSDKConfig.cmake
     DESTINATION ViveSDK
     NAMESPACE Vive::
 )

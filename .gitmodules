@@ -1,6 +1,9 @@
-[submodule "3rdParty/01FirstProject"]
-	path = 3rdParty/01FirstProject
-	url = https://github.com/sidneyniuhtc/01FirstProject.git
 [submodule "02Math"]
 	path = 02Math
 	url = https://github.com/sidneyniuhtc/02Math.git
+[submodule "02Algorithm"]
+	path = 02Algorithm
+	url = https://github.com/sidneyniuhtc/02Algorithm.git
+[submodule "3rdParty/00HelloCMake"]
+	path = 3rdParty/00HelloCMake
+	url = https://github.com/sidneyniuhtc/00HelloCMake.git
