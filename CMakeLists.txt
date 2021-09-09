@@ -4,7 +4,8 @@ cmake_minimum_required (VERSION 3.12)
 set(UPSTREAM_VERSION 3.4.1)
 
 add_subdirectory(02Math)
-add_subdirectory(3rdParty/01FirstProject)
+add_subdirectory(02Algorithm)
+add_subdirectory(3rdParty\00HelloCMake)
 
 set(PROJ_NAME "03Submodule")
 set(PROJ_TEST "Test${PROJ_NAME}")
